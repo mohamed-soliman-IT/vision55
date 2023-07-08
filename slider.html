@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+		<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+		<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+		<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+		<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+
+
+		<head>
+			<meta charset="utf-8">
+			<meta http-equiv="X-UA-Compatible" content="IE=edge">
+			<title>Vision.com</title>
+			<meta name="description" content="Slider Revolution Example" />
+			<meta name="keywords" content="fullscreen image, grid layout, flexbox grid, transition" />
+			<meta name="author" content="ThemePunch" />
+			<meta name="viewport" content="width=device-width, initial-scale=1">
+
+			<!-- LOAD JQUERY LIBRARY -->
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.js"></script>
+			
+			<!-- LOADING FONTS AND ICONS -->
+			<link href="https://fonts.googleapis.com/css?family=Roboto:400%7CPoppins:300%2C600&display=swap" rel="stylesheet" property="stylesheet" media="all" type="text/css" >
+
+			
+			<link rel="stylesheet" type="text/css" href="fonts/pe-icon-7-stroke/css/pe-icon-7-stroke.css">
+			<link rel="stylesheet" type="text/css" href="fonts/font-awesome/css/font-awesome.css">
+			
+			<!-- REVOLUTION STYLE SHEETS -->
+			<link rel="stylesheet" type="text/css" href="css/rs6.css">
+			<!-- REVOLUTION LAYERS STYLES -->
+						<!-- REVOLUTION JS FILES -->
+			
+		<script>
+			window.RS_MODULES = window.RS_MODULES || {};
+			window.RS_MODULES.modules = window.RS_MODULES.modules || {};
+			window.RS_MODULES.waiting = window.RS_MODULES.waiting || [];
+			window.RS_MODULES.defered = true;
+			window.RS_MODULES.moduleWaiting = window.RS_MODULES.moduleWaiting || {};
+			window.RS_MODULES.type = 'compiled';
+		</script>
+					<script src="js/rbtools.min.js"></script>
+							<script src="js/rs6.min.js"></script>
+							
+			<script>function setREVStartSize(e){
+			//window.requestAnimationFrame(function() {
+				window.RSIW = window.RSIW===undefined ? window.innerWidth : window.RSIW;
+				window.RSIH = window.RSIH===undefined ? window.innerHeight : window.RSIH;
+				try {
+					var pw = document.getElementById(e.c).parentNode.offsetWidth,
+						newh;
+					pw = pw===0 || isNaN(pw) || (e.l=="fullwidth" || e.layout=="fullwidth") ? window.RSIW : pw;
+					e.tabw = e.tabw===undefined ? 0 : parseInt(e.tabw);
+					e.thumbw = e.thumbw===undefined ? 0 : parseInt(e.thumbw);
+					e.tabh = e.tabh===undefined ? 0 : parseInt(e.tabh);
+					e.thumbh = e.thumbh===undefined ? 0 : parseInt(e.thumbh);
+					e.tabhide = e.tabhide===undefined ? 0 : parseInt(e.tabhide);
+					e.thumbhide = e.thumbhide===undefined ? 0 : parseInt(e.thumbhide);
+					e.mh = e.mh===undefined || e.mh=="" || e.mh==="auto" ? 0 : parseInt(e.mh,0);
+					if(e.layout==="fullscreen" || e.l==="fullscreen")
+						newh = Math.max(e.mh,window.RSIH);
+					else{
+						e.gw = Array.isArray(e.gw) ? e.gw : [e.gw];
+						for (var i in e.rl) if (e.gw[i]===undefined || e.gw[i]===0) e.gw[i] = e.gw[i-1];
+						e.gh = e.el===undefined || e.el==="" || (Array.isArray(e.el) && e.el.length==0)? e.gh : e.el;
+						e.gh = Array.isArray(e.gh) ? e.gh : [e.gh];
+						for (var i in e.rl) if (e.gh[i]===undefined || e.gh[i]===0) e.gh[i] = e.gh[i-1];
+											
+						var nl = new Array(e.rl.length),
+							ix = 0,
+							sl;
+						e.tabw = e.tabhide>=pw ? 0 : e.tabw;
+						e.thumbw = e.thumbhide>=pw ? 0 : e.thumbw;
+						e.tabh = e.tabhide>=pw ? 0 : e.tabh;
+						e.thumbh = e.thumbhide>=pw ? 0 : e.thumbh;
+						for (var i in e.rl) nl[i] = e.rl[i]<window.RSIW ? 0 : e.rl[i];
+						sl = nl[0];
+						for (var i in nl) if (sl>nl[i] && nl[i]>0) { sl = nl[i]; ix=i;}
+						var m = pw>(e.gw[ix]+e.tabw+e.thumbw) ? 1 : (pw-(e.tabw+e.thumbw)) / (e.gw[ix]);
+						newh =  (e.gh[ix] * m) + (e.tabh + e.thumbh);
+					}
+					var el = document.getElementById(e.c);
+					if (el!==null && el) el.style.height = newh+"px";
+					el = document.getElementById(e.c+"_wrapper");
+					if (el!==null && el) {
+						el.style.height = newh+"px";
+						el.style.display = "block";
+					}
+				} catch(e){
+					console.log("Failure at Presize of Slider:" + e)
+				}
+			//});
+		  };</script>
+
+
+<style>
+
+	.finish{
+		font-size: 50px;
+		display: flex;
+		justify-content: center;
+		font-family: ;
+	}
+
+	body{
+		background-color: #000000;
+	}
+</style>
+
+
+<style>
+
+
+	@keyframes popup {
+	  0% {
+		opacity: 0;
+	  }
+	  50% {
+		opacity: 1;
+	  }
+	  100% {
+		opacity: 0;
+	  }
+	}
+	
+	#myLink {
+	  animation: popup 2s infinite;
+	}
+	</style>
+
+
+			
+		
+</head>
+
+		
+		<body>
+		
+			<div class="popup" id="popup">
+			<!-- START Vision.com REVOLUTION SLIDER 6.6.14 --><p class="rs-p-wp-fix"></p>
+			<rs-module-wrap id="contact_wrapper" data-alias="blooming-contact1" data-source="gallery" style="visibility:hidden;background:#fff9e5;padding:0;margin:0px auto;margin-top:0;margin-bottom:0;">
+				<rs-module id="contact" style="" data-version="6.6.14">
+					<rs-slides style="overflow: hidden; position: absolute;">
+						<rs-slide style="position: absolute;" data-key="rs-520" data-title="Slide" data-in="o:0;" data-out="a:false;" id="contact">
+							<img src="assets/transparent.png" alt="Slide" class="rev-slidebg tp-rs-img" data-bg="c:#000000;" data-no-retina>
+<!--						--><rs-zone id="rrzt_520" class="rev_row_zone_top" style="z-index: 7;"><!--
+
+								--><rs-row
+									id="slider-208-slide-520-layer-0" 
+									data-type="row"
+									data-xy="xo:50px;yo:50px;"
+									data-cbreak="nobreak"
+									data-rsp_bd="off"
+									data-margin="t:200,200,150,150;r:30,30,30,20;l:30,30,30,20;"
+									data-border="bos:solid;boc:#000000;bow:2px,2px,2px,2px;"
+									data-clip="u:true;o:cv;"
+									data-frame_0="o:1;cp:0%;"
+									data-frame_1="e:power4.out;st:500;sp:2000;sR:500;"
+									data-frame_999="o:0;st:w;sR:6500;sA:9000;"
+									style="z-index:7;background-color:#ffffff;"
+								><!--
+									--><rs-column
+										id="slider-208-slide-520-layer-1" 
+										data-type="column"
+										data-xy="xo:50px;yo:50px;"
+										data-text="a:right;"
+										data-rsp_bd="off"
+										data-column="w:100%;"
+										data-padding="t:60;r:30;b:40;l:30;"
+										data-frame_0="o:1;"
+										data-frame_999="o:0;st:w;sR:8700;sA:9000;"
+										style="z-index:6;background-color:#000000;width:100%;"
+									><!--
+										--><rs-layer
+											id="slider-208-slide-520-layer-12" 
+											data-type="text"
+											data-xy="yo:0,46px,46px,46px;"
+											data-pos="r"
+											data-text="w:normal;s:80,70,60,40;l:80,70,60,40;ls:15px,15px,10px,5px;fw:500;a:center;"
+											data-rsp_o="off"
+											data-rsp_bd="off"
+											data-padding="l:15,15,10,5;"
+											data-clip="u:true;o:cv;"
+											data-frame_0="sX:0.5;sY:0.5;o:1;cp:0%;"
+											data-frame_1="e:power4.out;st:300;sp:1000;sR:300;cp:100%;"
+											data-frame_999="o:0;st:w;sR:7700;"
+											style="z-index:6;font-family:'poppins-semibold';"
+										>GET IN TOUCH 
+										</rs-layer><!--
+									--></rs-column><!--
+								--></rs-row><!--
+
+								--><rs-row
+									id="slider-208-slide-520-layer-51" 
+									data-type="row"
+									data-xy="xo:50px;yo:50px;"
+									data-rsp_bd="off"
+									data-margin="r:30,30,30,20;l:30,30,30,20;"
+									data-border="bos:solid;boc:#000000;bow:0px,2px,2px,2px;"
+									data-clip="u:true;o:cv;"
+									data-frame_0="o:1;cp:0%;"
+									data-frame_1="e:power4.out;st:500;sp:2000;sR:500;"
+									data-frame_999="o:0;st:w;sR:6500;sA:9000;"
+									style="z-index:6;background-color:#ffffff;"
+								><!--
+									--><rs-column
+										id="slider-208-slide-520-layer-52" 
+										data-type="column"
+										data-xy="xo:50px;yo:50px;"
+										data-text="a:left,left,center,center;"
+										data-rsp_bd="off"
+										data-column="w:40%;"
+										data-padding="t:50;r:0,0,30,30;b:50;l:100,50,30,30;"
+										data-frame_0="o:1;"
+										data-frame_999="o:0;st:w;sR:8700;sA:9000;"
+										style="z-index:7;background-color:#000000;width:100%;"
+									><!--
+										--><rs-layer
+											id="slider-208-slide-520-layer-63" 
+											data-type="text"
+											data-xy=""
+											data-pos="r"
+											data-text="w:normal;s:17,17,17,15;f:none,left,left,none;l:30,30,30,25;fw:300;a:left,left,center,center;"
+											data-flcr="f:none,left,left,none;"
+											data-dim="w:335px,100%,100%,100%;"
+											data-rsp_o="off"
+											data-rsp_bd="off"
+											data-disp="inline-block"
+											data-margin="t:45,45,0,0;"
+											data-frame_999="o:0;st:w;sR:8700;"
+											style="z-index:9;font-family:'Poppins';display:inline-block;"
+										><span style="font-weight:600;">Vision Company</span><br />
+9 Egyptian Army Bridge, Sheraton Al Matar, El Nozha, Cairo Governorate 
+										</rs-layer><!--
+
+										--><rs-layer
+											id="slider-208-slide-520-layer-68" 
+											data-type="text"
+											data-xy=""
+											data-pos="r"
+											data-text="w:normal;s:17,17,17,15;f:none,left,left,none;l:30,30,30,25;fw:300;a:left,left,center,center;"
+											data-flcr="f:none,left,left,none;"
+											data-dim="w:100%;"
+											data-rsp_o="off"
+											data-rsp_bd="off"
+											data-disp="inline-block"
+											data-margin="t:45,45,45,35;"
+											data-frame_999="o:0;st:w;sR:8700;"
+											style="z-index:8;font-family:'Poppins';display:inline-block;"
+										><span style="font-weight:600;display:inline-block;width:100px;">Mo. - Fr.:</span> 09:00 - 18:00<br />
+<span style="font-weight:600;display:inline-block;width:100px;">Sa.:</span> 08:00 - 14:00 
+										</rs-layer><!--
+
+										--><a
+											id="slider-208-slide-520-layer-64" 
+											class="rs-layer"
+											href="#" target="_self" rel="nofollow"
+											data-type="text"
+											data-xy=""
+											data-pos="r"
+											data-text="w:normal;s:17,17,17,15;l:20;fw:300;"
+											data-rsp_o="off"
+											data-rsp_bd="off"
+											data-disp="inline-block"
+											data-margin="t:50,40,40,35;"
+											data-border="bos:solid;boc:#000000;bow:0,0,1px,0;"
+											data-frame_999="o:0;st:w;sR:8700;"
+											data-frame_hover="c:#000;boc:transparent;bos:solid;bow:0,0,1px,0;e:power1.inOut;"
+											style="z-index:7;font-family:'Poppins';cursor:pointer;display:inline-block;"
+										>contact: vision.studio.com 
+										</a><!--
+
+										--><a
+											id="slider-208-slide-520-layer-65" 
+											class="rs-layer"
+											href="#" target="_self" rel="nofollow"
+											data-type="text"
+											data-xy=""
+											data-pos="r"
+											data-text="w:normal;s:17,17,17,15;l:30,30,30,25;fw:300;a:left,left,center,center;"
+											data-dim="w:auto,100%,100%,100%;"
+											data-rsp_o="off"
+											data-rsp_bd="off"
+											data-disp="inline-block"
+											data-frame_999="o:0;st:w;sR:8700;"
+											style="z-index:6;font-family:'Poppins';cursor:pointer;display:inline-block;"
+										>Phone: +1 800 98765432 
+										</a>
+										
+										<!--
+									--></rs-column><!--
+
+									--><rs-column
+										id="slider-208-slide-520-layer-55" 
+										data-type="column"
+										data-xy="xo:50px;yo:155px;"
+										data-rsp_bd="off"
+										data-column="w:60%;"
+										data-padding="t:50,50,0,0;r:50,50,50,30;b:50,50,50,30;l:0,0,50,30;"
+										data-frame_0="o:1;"
+										data-frame_999="o:0;st:w;sR:8700;sA:9000;"
+										style="z-index:6;background-color:#000000;width:100%;"
+									><!--
+										--><rs-layer
+											id="slider-208-slide-520-layer-46" 
+											class="intrinsic-ignore"
+											data-type="text"
+											data-rsp_ch="on"
+											data-xy="x:r;xo:-370px,-305px,-231px,-142px;"
+											data-pos="r"
+											data-text="w:normal;s:20,16,12,7;l:25,20,15,9;"
+											data-dim="w:100%;"
+											data-frame_1="st:1000;sp:1000;sR:1000;"
+											data-frame_999="o:0;st:w;sR:7000;"
+											style="z-index:6;font-family:'Roboto';"
+										><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d592.6062205017972!2d6.960638567331929!3d50.93702301435997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47bf267c59907c81%3A0x5153cebce777d9e!2sThemePunch!5e0!3m2!1sen!2sde!4v1559805543692!5m2!1sen!2sde" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe> 
+										</rs-layer>
+									<a id="myLink"
+									class="rs-layer"
+									href="full.html" rel="nofollow"
+									data-type="text"
+									data-xy=""
+									data-pos="r"
+									data-text="w:normal;s:17,17,17,15;l:30,30,30,25;fw:300;a:left,left,center,center;"
+									data-dim="w:auto,100%,100%,100%;"
+									data-rsp_o="off"
+									data-rsp_bd="off"
+									data-disp="inline-block"
+									data-frame_999="o:0;st:w;sR:8700;"
+									style="z-index:6;font-family:'Poppins';cursor:pointer;display:inline-block; padding-top: 190px; "
+									>
+									Close
+									</a>
+										
+										<!--
+									--></rs-column><!--
+								--></rs-row><!--
+							--></rs-zone><!--
+-->						</rs-slide>
+					</rs-slides>
+				</rs-module>
+				
+
+				
+				<script>
+					
+				</script>
+<script>
+		if(typeof revslider_showDoubleJqueryError === "undefined") {function revslider_showDoubleJqueryError(sliderID) {console.log("You have some jquery.js library include that comes after the Slider Revolution files js inclusion.");console.log("To fix this, you can:");console.log("1. Set 'Module General Options' -> 'Advanced' -> 'jQuery & OutPut Filters' -> 'Put JS to Body' to on");console.log("2. Find the double jQuery.js inclusion and remove it");return "Double Included jQuery Library";}}
+</script>
+			</rs-module-wrap>
+			<!-- END REVOLUTION SLIDER -->
+
+
+
+			
+			</div>
+		
+		
+		  
+			
+
+
+				<script>
+					var	tpj = jQuery;
+					if(window.RS_MODULES === undefined) window.RS_MODULES = {};
+					if(RS_MODULES.modules === undefined) RS_MODULES.modules = {};
+					RS_MODULES.modules["contact"] = {once: RS_MODULES.modules["contact"]!==undefined ? RS_MODULES.modules["contact"].once : undefined, init:function() {
+						window.revapi208 = window.revapi208===undefined || window.revapi208===null || window.revapi208.length===0  ? document.getElementById("contact") : window.revapi208;
+						if(window.revapi208 === null || window.revapi208 === undefined || window.revapi208.length==0) { window.revapi208initTry = window.revapi208initTry ===undefined ? 0 : window.revapi208initTry+1; if (window.revapi208initTry<20) requestAnimationFrame(function() {RS_MODULES.modules["contact"].init()}); return;}
+						window.revapi208 = jQuery(window.revapi208);
+						if(window.revapi208.revolution==undefined){ revslider_showDoubleJqueryError("contact"); return;}
+						revapi208.revolutionInit({
+								revapi:"revapi208",
+								sliderType:"hero",
+								DPR:"dpr",
+								sliderLayout:"fullwidth",
+								visibilityLevels:"1240,1024,778,480",
+								gridwidth:"1240,1024,778,480",
+								gridheight:"1290,1274,1598,720",
+								perspective:600,
+								perspectiveType:"local",
+								keepBPHeight:true,
+								editorheight:"1290,1274,1598,1119",
+								responsiveLevels:"1240,1024,778,480",
+								progressBar:{disableProgressBar:true},
+								navigation: {
+									onHoverStop:false
+								},
+								viewPort: {
+									global:false,
+									globalDist:"-200px",
+									enable:true,
+									visible_area:"-100px"
+								},
+								fallbacks: {
+									allowHTML5AutoPlayOnAndroid:true
+								},
+						});
+						
+					}} // End of RevInitScript
+					if (window.RS_MODULES.checkMinimal!==undefined) { window.RS_MODULES.checkMinimal();};
+				</script>
+
+
+
+<script type="text/javascript">window.RVS = window.RVS || {}; window.RVS.ENV = window.RVS.ENV || {}; window.RVS.ENV.TRANSITIONPACK_URL = "https://wordpress-966162-3585430.cloudwaysapps.com/wp-content/plugins/revslider-transitionpack-addon/";</script>
+		</body>
+				</html>
+		

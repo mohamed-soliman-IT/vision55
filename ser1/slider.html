@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+		<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+		<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+		<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+		<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+
+		<head>
+			<meta charset="utf-8">
+			<meta http-equiv="X-UA-Compatible" content="IE=edge">
+			<title>Marketing Strategy & Industry Analysis - Slider Revolution</title>
+			<meta name="description" content="Slider Revolution Example" />
+			<meta name="keywords" content="fullscreen image, grid layout, flexbox grid, transition" />
+			<meta name="author" content="ThemePunch" />
+			<meta name="viewport" content="width=device-width, initial-scale=1">
+
+			<!-- LOAD JQUERY LIBRARY -->
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.js"></script>
+			
+			<!-- LOADING FONTS AND ICONS -->
+			<link href="https://fonts.googleapis.com/css?family=Poppins:300%2C400%7CRoboto:400%2C500%7CLato:300&display=swap" rel="stylesheet" property="stylesheet" media="all" type="text/css" >
+
+			
+			<link rel="stylesheet" type="text/css" href="fonts/pe-icon-7-stroke/css/pe-icon-7-stroke.css">
+			<link rel="stylesheet" type="text/css" href="fonts/font-awesome/css/font-awesome.css">
+			
+			<!-- REVOLUTION STYLE SHEETS -->
+			<link rel="stylesheet" type="text/css" href="css/rs6.css">
+			<!-- REVOLUTION LAYERS STYLES -->
+						<!-- REVOLUTION JS FILES -->
+			
+		<script>
+			window.RS_MODULES = window.RS_MODULES || {};
+			window.RS_MODULES.modules = window.RS_MODULES.modules || {};
+			window.RS_MODULES.waiting = window.RS_MODULES.waiting || [];
+			window.RS_MODULES.defered = true;
+			window.RS_MODULES.moduleWaiting = window.RS_MODULES.moduleWaiting || {};
+			window.RS_MODULES.type = 'compiled';
+		</script>
+					<script src="js/rbtools.min.js"></script>
+							<script src="js/rs6.min.js"></script>
+							
+			<script>function setREVStartSize(e){
+			//window.requestAnimationFrame(function() {
+				window.RSIW = window.RSIW===undefined ? window.innerWidth : window.RSIW;
+				window.RSIH = window.RSIH===undefined ? window.innerHeight : window.RSIH;
+				try {
+					var pw = document.getElementById(e.c).parentNode.offsetWidth,
+						newh;
+					pw = pw===0 || isNaN(pw) || (e.l=="fullwidth" || e.layout=="fullwidth") ? window.RSIW : pw;
+					e.tabw = e.tabw===undefined ? 0 : parseInt(e.tabw);
+					e.thumbw = e.thumbw===undefined ? 0 : parseInt(e.thumbw);
+					e.tabh = e.tabh===undefined ? 0 : parseInt(e.tabh);
+					e.thumbh = e.thumbh===undefined ? 0 : parseInt(e.thumbh);
+					e.tabhide = e.tabhide===undefined ? 0 : parseInt(e.tabhide);
+					e.thumbhide = e.thumbhide===undefined ? 0 : parseInt(e.thumbhide);
+					e.mh = e.mh===undefined || e.mh=="" || e.mh==="auto" ? 0 : parseInt(e.mh,0);
+					if(e.layout==="fullscreen" || e.l==="fullscreen")
+						newh = Math.max(e.mh,window.RSIH);
+					else{
+						e.gw = Array.isArray(e.gw) ? e.gw : [e.gw];
+						for (var i in e.rl) if (e.gw[i]===undefined || e.gw[i]===0) e.gw[i] = e.gw[i-1];
+						e.gh = e.el===undefined || e.el==="" || (Array.isArray(e.el) && e.el.length==0)? e.gh : e.el;
+						e.gh = Array.isArray(e.gh) ? e.gh : [e.gh];
+						for (var i in e.rl) if (e.gh[i]===undefined || e.gh[i]===0) e.gh[i] = e.gh[i-1];
+											
+						var nl = new Array(e.rl.length),
+							ix = 0,
+							sl;
+						e.tabw = e.tabhide>=pw ? 0 : e.tabw;
+						e.thumbw = e.thumbhide>=pw ? 0 : e.thumbw;
+						e.tabh = e.tabhide>=pw ? 0 : e.tabh;
+						e.thumbh = e.thumbhide>=pw ? 0 : e.thumbh;
+						for (var i in e.rl) nl[i] = e.rl[i]<window.RSIW ? 0 : e.rl[i];
+						sl = nl[0];
+						for (var i in nl) if (sl>nl[i] && nl[i]>0) { sl = nl[i]; ix=i;}
+						var m = pw>(e.gw[ix]+e.tabw+e.thumbw) ? 1 : (pw-(e.tabw+e.thumbw)) / (e.gw[ix]);
+						newh =  (e.gh[ix] * m) + (e.tabh + e.thumbh);
+					}
+					var el = document.getElementById(e.c);
+					if (el!==null && el) el.style.height = newh+"px";
+					el = document.getElementById(e.c+"_wrapper");
+					if (el!==null && el) {
+						el.style.height = newh+"px";
+						el.style.display = "block";
+					}
+				} catch(e){
+					console.log("Failure at Presize of Slider:" + e)
+				}
+			//});
+		  };</script>
+
+			
+		</head>
+		
+		<body>
+		
+
+			<!-- START Marketing Strategy &amp; Industry Analysis REVOLUTION SLIDER 6.6.14 --><p class="rs-p-wp-fix"></p>
+			<rs-module-wrap id="services_wrapper" data-alias="content-distribution-1" data-source="gallery" style="visibility:hidden;background:transparent;padding:0;">
+				<rs-module id="services" style="" data-version="6.6.14">
+					<rs-slides style="overflow: hidden; position: absolute;">
+						<rs-slide style="position: absolute;" data-key="rs-571" data-title="Services" data-in="o:0;" data-out="a:false;">
+							<img src="assets/dummy.png" alt="Services" class="rev-slidebg tp-rs-img rs-lazyload" data-lazyload="assets/transparent.png" data-bg="p:center top;c:#000000;" data-parallax="off" data-no-retina>
+<!--
+							--><rs-layer
+								id="slider-244-slide-571-layer-0" 
+								data-type="text"
+								data-color="rgba(255, 255, 255, 0.6)||rgba(255,255,255,0.50)||rgba(255,255,255,0.50)||rgba(255,255,255,0.50)"
+								data-rsp_ch="on"
+								data-xy="xo:13px,8px,10px,8px;yo:52px,36px,45px,53px;"
+								data-text="w:normal;s:17,18,13,12;l:28,28,18,16;fw:300;"
+								data-dim="w:763px,709px,427px,288px;"
+								data-frame_999="o:0;st:w;"
+								style="z-index:15;font-family:'Poppins';"
+							>A market analysis is a thorough assessment of a market within a specific industry. You will study the dynamics of your market, such as volume and value, potential customer segments, buying patterns, competition, and other important factors. A thorough marketing analysis should answer the following questions: 
+							</rs-layer><!--
+
+							--><rs-layer
+								id="slider-244-slide-571-layer-1" 
+								class="rs-layer-video intrinsic-ignore"
+								data-type="video"
+								data-rsp_ch="on"
+								data-xy="xo:821px,587px,449px,263px;yo:171px,210px,157px,184px;"
+								data-text="w:normal;s:20,16,12,7;l:0,20,15,9;"
+								data-dim="w:370px,345px,266px,202px;h:370px,315px,266px,202px;"
+								data-video="vfc:false;vd:100;l:false;ptimer:false;vc:t;"
+								data-poster="assets/Film-Documentary-1_555_layer.jpeg"
+								data-mp4="assets/Film-Documentary-1.mp4"
+								data-frame_999="o:0;st:w;"
+								style="z-index:16;"
+							>
+							</rs-layer><!--
+
+							--><rs-layer
+								id="slider-244-slide-571-layer-3" 
+								class="FullSiteBlock-Title rs-pxl-1"
+								data-type="text"
+								data-color="rgba(255,255,255,1)"
+								data-rsp_ch="on"
+								data-xy="x:l,l,c,c;xo:-16px,-19px,-249px,-126px;yo:4px,7px,9px,10px;"
+								data-text="w:normal;s:23,16,13,11;l:28,19,16,14;fw:300;a:center;"
+								data-dim="w:513,369px,306px,247px;"
+								data-frame_0="y:26px,16px,16px,12px;"
+								data-frame_1="e:power4.out;st:250;sp:2500;"
+								data-frame_999="y:5px,3px,3px,2px;o:0;e:power4.out;st:w;sp:500;"
+								style="z-index:5;font-family:'poppins-semibold';"
+							>Marketing Strategy & Industry Analysis 
+							</rs-layer><!--
+
+							--><rs-layer
+								id="slider-244-slide-571-layer-4" 
+								class="FullSiteBlock-SubTitle rs-pxl-3"
+								data-type="text"
+								data-color="rgba(255, 255, 255, 0.6)||rgba(255,255,255,0.50)||rgba(255,255,255,0.50)||rgba(255,255,255,0.50)"
+								data-rsp_ch="on"
+								data-xy="x:c;xo:-372px,-300px,-239px,-105px;yo:301px,295px,247px,295px;"
+								data-text="w:normal;s:25,21,15,14;l:39,31,23,20;fw:300;"
+								data-dim="w:425px,350px,246px,234px;"
+								data-frame_0="x:0,0px,0px,0px;y:0,0px,0px,0px;sX:0.8;sY:0.8;"
+								data-frame_1="x:0,0px,0px,0px;y:0,0px,0px,0px;e:power4.out;st:950;sp:1000;"
+								data-frame_999="y:15px,10px,7px,5px;o:0;e:power4.out;st:w;sp:500;"
+								style="z-index:11;font-family:'Poppins';"
+							>- How large is my target market?
+- How much are customers willing to pay for my product?
+
+
+ 
+							</rs-layer><!--
+
+							--><rs-layer
+								id="slider-244-slide-571-layer-7" 
+								class="FullSiteBlock-SubTitle rs-pxl-2"
+								data-type="text"
+								data-color="rgba(255, 255, 255, 0.9)||rgba(255,255,255,1)||rgba(255,255,255,1)||rgba(255,255,255,1)"
+								data-rsp_ch="on"
+								data-xy="x:c;xo:-355px,-329px,-216px,-99px;yo:616px,552px,468px,512px;"
+								data-text="w:normal;s:26,17,16,14;l:34,23,24,18;fw:300;a:center;"
+								data-dim="w:508px,363px,390px,298px;"
+								data-frame_0="y:19px,9px,14px,13px;"
+								data-frame_1="x:-1px,0px,0px,0px;y:-48px,0px,0px,0px;e:power4.out;st:1450;sp:1500;"
+								data-frame_999="y:11px,6px,7px,5px;o:0;e:power4.out;st:w;sp:500;"
+								style="z-index:13;font-family:'Lato';"
+							>- Benefits of market analysis for your business:  
+							</rs-layer><!--
+
+							--><rs-layer
+								id="slider-244-slide-571-layer-8" 
+								class="FullSiteBlock-SubTitle rs-pxl-3"
+								data-type="text"
+								data-color="rgba(255, 255, 255, 0.6)||rgba(255,255,255,0.50)||rgba(255,255,255,0.50)||rgba(255,255,255,0.50)"
+								data-rsp_ch="on"
+								data-xy="x:c;xo:-373px,-279px,-219px,-120px;yo:419px,399px,155px,215px;"
+								data-text="w:normal;s:25,23,17,12;l:39,35,26,18;fw:300;"
+								data-dim="w:425px,392px,288px,204px;"
+								data-frame_0="x:0,0px,0px,0px;y:0,0px,0px,0px;sX:0.9;sY:0.9;"
+								data-frame_1="x:0,0px,0px,0px;y:0,0px,0px,0px;st:950;sp:1000;"
+								data-frame_999="y:15px,12px,8px,4px;o:0;e:power4.out;st:w;sp:500;"
+								style="z-index:11;font-family:'Poppins';"
+							>- Who are my main competitors?
+- What are my competitors’ strengths and weaknesses?
+
+
+ 
+							</rs-layer><!--
+
+							--><rs-layer
+								id="slider-244-slide-571-layer-10" 
+								class="FullSiteBlock-SubTitle rs-pxl-3"
+								data-type="text"
+								data-color="rgba(255, 255, 255, 0.6)||rgba(255,255,255,0.50)||rgba(255,255,255,0.50)||rgba(255,255,255,0.50)"
+								data-rsp_ch="on"
+								data-xy="x:c;xo:-96px,-104px,-27px,5px;yo:693px,624px,524px,557px;"
+								data-text="w:normal;s:17,14,16,12;l:27,22,25,17;fw:300;"
+								data-dim="w:954,746px,625px,456px;"
+								data-frame_0="y:29px,26px,25px,20px;"
+								data-frame_1="y:-46px,0px,0px,0px;e:power4.out;st:1550;sp:1500;"
+								data-frame_999="y:9px,9px,9px,7px;o:0;e:power4.out;st:w;sp:500;"
+								style="z-index:14;font-family:'Poppins';"
+							>Knowing your market can reduce the risks in your business, as you will have an understanding of the main market trends, key players in your industry, what it takes to be successful, and you can also conduct a SWOT analysis, which identifies the strengths, weaknesses, opportunities, and threats for your business. 
+							</rs-layer><!--
+
+							--><rs-layer
+								id="slider-244-slide-571-layer-15" 
+								class="FullSiteBlock-SubTitle rs-pxl-3"
+								data-type="text"
+								data-color="rgba(255, 255, 255, 0.6)||rgba(255,255,255,0.50)||rgba(255,255,255,0.50)||rgba(255,255,255,0.50)"
+								data-rsp_ch="on"
+								data-xy="x:c;xo:-356px,-290px,-244px,-102px;yo:187px,197px,340px,377px;"
+								data-text="w:normal;s:25,20,13,13;l:39,31,21,18;fw:300;"
+								data-dim="w:457px,366px,235px,233px;"
+								data-frame_0="x:0,0px,0px,0px;y:0,0px,0px,0px;sX:0.9;sY:0.9;"
+								data-frame_1="x:0,0px,0px,0px;y:0,0px,0px,0px;st:950;sp:1000;"
+								data-frame_999="y:15px,10px,6px,4px;o:0;e:power4.out;st:w;sp:500;"
+								style="z-index:11;font-family:'Poppins';"
+							>- Who are my potential customers?
+- What are my customers’ buying habits?
+
+
+
+ 
+							</rs-layer><!--
+
+							--><rs-layer
+								id="slider-244-slide-571-layer-16" 
+								data-type="text"
+								data-color="rgba(255, 255, 255, 0.7)"
+								data-rsp_ch="on"
+								data-xy="xo:34px,25px,39px,12px;yo:591px,572px,485px,523px;"
+								data-text="w:normal;s:20,16,12,10;l:25,20,15,13;"
+								data-dim="w:142px,117px,88px,198px;"
+								data-frame_0="x:0,0,0,0px;y:0,0,0,0px;"
+								data-frame_1="x:0,0,0,0px;y:0,0,0,0px;"
+								data-frame_999="o:0;st:w;"
+								style="z-index:17;font-family:'Roboto';"
+							><br />
+Risk mitigation: 
+							</rs-layer><!--
+-->						</rs-slide>
+						<rs-slide style="position: absolute;" data-key="rs-572" data-title="Slide" data-in="o:0;" data-out="a:false;">
+							<img src="assets/dummy.png" alt="Slide" class="rev-slidebg tp-rs-img rs-lazyload" data-lazyload="assets/transparent.png" data-bg="c:#000000;" data-parallax="off" data-no-retina>
+<!--
+							--><rs-layer
+								id="slider-244-slide-572-layer-9" 
+								data-type="text"
+								data-color="rgba(255, 255, 255, 0.6)"
+								data-rsp_ch="on"
+								data-xy="xo:40px,44px,33px,21px;yo:371px,377px,286px,281px;"
+								data-text="w:normal;s:20,16,12,12;l:26,21,15,17;"
+								data-dim="w:976,805,611,416px;"
+								data-frame_0="rX:70deg;oZ:-50;"
+								data-frame_1="oZ:-50;e:power4.inOut;sp:1750;"
+								data-frame_999="o:0;st:w;"
+								style="z-index:7;font-family:'Poppins';"
+							>Market forecasting is a key component of most marketing analyses, as it presents future numbers, characteristics, and trends in the targeted market. This gives you an idea of the profits you can expect, allowing you to adjust your business plan and budget accordingly.<br />
+ 
+							</rs-layer><!--
+
+							--><rs-layer
+								id="slider-244-slide-572-layer-11" 
+								data-type="text"
+								data-rsp_ch="on"
+								data-xy="x:c;xo:-4px,-10px,-7px,-4px;yo:13px,12px,9px,8px;"
+								data-text="w:normal;s:25,20,15,12;l:31,25,18,16;"
+								data-dim="w:auto,auto,auto,246px;h:auto,auto,auto,31px;"
+								data-frame_999="o:0;st:w;"
+								style="z-index:5;font-family:'poppins-semibold';"
+							>Marketing Strategy & Industry Analysis 
+							</rs-layer><!--
+
+							--><rs-layer
+								id="slider-244-slide-572-layer-12" 
+								data-type="text"
+								data-color="rgba(255, 255, 255, 0.9)"
+								data-rsp_ch="on"
+								data-xy="xo:29px,35px,26px,8px;yo:81px,75px,56px,58px;"
+								data-text="w:normal;s:23,18,13,15;l:29,23,17,17;"
+								data-dim="w:auto,auto,auto,449px;h:auto,auto,auto,25px;"
+								data-frame_999="o:0;st:w;"
+								style="z-index:6;font-family:'Poppins';"
+							>- Targeted products or services: 
+							</rs-layer><!--
+
+							--><rs-layer
+								id="slider-244-slide-572-layer-13" 
+								data-type="text"
+								data-color="rgba(255, 255, 255, 0.6)"
+								data-rsp_ch="on"
+								data-xy="xo:47px,49px,37px,23px;yo:118px,121px,91px,85px;"
+								data-text="w:normal;s:20,16,12,12;l:26,21,15,17;"
+								data-dim="w:976,805,611,431px;"
+								data-frame_0="rX:70deg;oZ:-50;"
+								data-frame_1="oZ:-50;e:power4.inOut;sp:1750;"
+								data-frame_999="o:0;st:w;"
+								style="z-index:7;font-family:'Poppins';"
+							>You are in a much better position to serve your customers when you have a strong understanding of what they are looking for from you. When you know who your customers are, you can use this information to customize your business offerings according to their needs. 
+							</rs-layer><!--
+
+							--><rs-layer
+								id="slider-244-slide-572-layer-14" 
+								data-type="text"
+								data-color="rgba(255, 255, 255, 0.6)"
+								data-rsp_ch="on"
+								data-xy="xo:47px,49px,37px,23px;yo:258px,246px,186px,203px;"
+								data-text="w:normal;s:20,21,15,14;l:25,27,20,17;"
+								data-dim="w:817px,764px,580px,377px;"
+								data-frame_0="x:0,0px,0px,0px;y:0,0px,0px,0px;sX:0.9;sY:0.9;"
+								data-frame_1="x:0,0px,0px,0px;y:0,0px,0px,0px;sp:1000;"
+								data-frame_999="o:0;st:w;"
+								style="z-index:8;font-family:'Poppins';"
+							>Staying in business often involves being the first to discover a new opportunity or trend. 
+							</rs-layer><!--
+
+							--><rs-layer
+								id="slider-244-slide-572-layer-17" 
+								data-type="text"
+								data-color="rgba(255, 255, 255, 0.9)"
+								data-rsp_ch="on"
+								data-xy="xo:28px,39px,29px,10px;yo:219px,204px,154px,173px;"
+								data-text="w:normal;s:23,18,13,15;l:29,23,17,17;"
+								data-dim="w:auto,auto,auto,449px;h:auto,auto,auto,25px;"
+								data-frame_999="o:0;st:w;"
+								style="z-index:6;font-family:'Poppins';"
+							>- Emerging trends: 
+							</rs-layer><!--
+
+							--><rs-layer
+								id="slider-244-slide-572-layer-18" 
+								data-type="text"
+								data-color="rgba(255, 255, 255, 0.9)"
+								data-rsp_ch="on"
+								data-xy="xo:27px,36px,27px,9px;yo:327px,337px,256px,259px;"
+								data-text="w:normal;s:23,18,13,15;l:29,23,17,17;"
+								data-dim="w:auto,286px,217px,449px;h:auto,auto,auto,25px;"
+								data-frame_999="o:0;st:w;"
+								style="z-index:6;font-family:'Poppins';"
+							>- Revenue expectations: 
+							</rs-layer><!--
+
+							--><rs-layer
+								id="slider-244-slide-572-layer-20" 
+								data-type="text"
+								data-color="rgba(255, 255, 255, 0.6)"
+								data-rsp_ch="on"
+								data-xy="xo:40px,36px,27px,22px;yo:527px,687px,521px,559px;"
+								data-text="w:normal;s:20,16,12,14;l:26,21,15,20;"
+								data-dim="w:976,805,611,428px;"
+								data-frame_0="rX:70deg;oZ:-50;"
+								data-frame_1="oZ:-50;e:power4.inOut;sp:1750;"
+								data-frame_999="o:0;st:w;"
+								style="z-index:7;font-family:'Poppins';"
+							>Measuring your business's success outside of pure numbers can be difficult. Market analysis provides key performance indicators (KPIs) that you can use to judge your company's performance compared to others in your field. 
+							</rs-layer><!--
+
+							--><rs-layer
+								id="slider-244-slide-572-layer-21" 
+								data-type="text"
+								data-color="rgba(255, 255, 255, 0.9)"
+								data-rsp_ch="on"
+								data-xy="xo:17px,34px,25px,11px;yo:478px,479px,363px,384px;"
+								data-text="w:normal;s:23,18,13,15;l:29,23,17,18;"
+								data-dim="w:auto,auto,auto,467px;h:auto,auto,auto,26px;"
+								data-frame_999="o:0;st:w;"
+								style="z-index:6;font-family:'Poppins';"
+							>- Evaluation criteria: 
+							</rs-layer><!--
+
+							--><rs-layer
+								id="slider-244-slide-572-layer-22" 
+								data-type="text"
+								data-color="rgba(255, 255, 255, 0.6)"
+								data-rsp_ch="on"
+								data-xy="xo:40px,45px,34px,22px;yo:699px,521px,395px,408px;"
+								data-text="w:normal;s:20,16,12,13;l:26,21,15,19;"
+								data-dim="w:976,805,611,439px;"
+								data-frame_0="rX:70deg;oZ:-50;"
+								data-frame_1="oZ:-50;e:power4.inOut;sp:1750;"
+								data-frame_999="o:0;st:w;"
+								style="z-index:7;font-family:'Poppins';"
+							>This is where annual marketing analysis is useful – regular analysis can familiarize you with your ongoing marketing efforts and clarify which aspects of your marketing need work and which ones are working well compared to other companies in your field.<br />
+ 
+							</rs-layer><!--
+
+							--><rs-layer
+								id="slider-244-slide-572-layer-23" 
+								data-type="text"
+								data-color="rgba(255, 255, 255, 0.9)"
+								data-rsp_ch="on"
+								data-xy="xo:16px,26px,19px,15px;yo:653px,639px,485px,527px;"
+								data-text="w:normal;s:23,18,13,14;l:29,23,17,16;"
+								data-dim="w:auto,auto,auto,415px;h:auto,auto,auto,23px;"
+								data-frame_999="o:0;st:w;"
+								style="z-index:6;font-family:'Poppins';"
+							>- Marketing optimization:  
+							</rs-layer><!--
+-->						</rs-slide>
+					</rs-slides>
+					<rs-static-layers class="rs-stl-visible"><!--
+
+							--><rs-layer
+								id="slider-244-slide-233-layer-5" 
+								class="FullSiteBlock-DownButton rev-btn rs-pxl-1 rs-layer-static"
+								data-type="button"
+								data-color="rgba(255, 255, 255, 0.8)||rgba(255, 255, 255, 0.4)||rgba(255,255,255,1)||rgba(255,255,255,1)"
+								data-xy="x:l,c,c,c;xo:-130px,-497px,-475px,-293px;y:m,t,t,t;yo:0,461px,321px,289px;"
+								data-text="s:25;l:32;fw:500;a:center;"
+								data-dim="w:30px;h:30px;"
+								data-vbility="t,t,f,f"
+								data-actions='o:click;a:jumptoslide;slide:previous;'
+								data-rsp_bd="off"
+								data-onslides="s:1;"
+								data-padding="t:1;r:1;b:1;l:1;"
+								data-border="bos:solid;bow:1px,1px,1px,1px;bor:30px,30px,30px,30px;"
+								data-frame_0="y:30px;"
+								data-frame_1="e:power4.out;st:1000;sp:1500;"
+								data-frame_999="o:0;e:nothing;st:w;"
+								data-frame_hover="c:#5ac8fa;bor:30px,30px,30px,30px;bos:solid;bow:1px,1px,1px,1px;oX:50;oY:50;e:power1.inOut;"
+								style="z-index:5;font-family:'Roboto';cursor:pointer;outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;"
+							><i class="material-icons">arrow_back_ios</i> 
+							</rs-layer><!--
+
+							--><rs-layer
+								id="slider-244-slide-233-layer-6" 
+								class="FullSiteBlock-DownButton rev-btn rs-pxl-1 rs-layer-static"
+								data-type="button"
+								data-color="rgba(255, 255, 255, 0.8)||rgba(255, 255, 255, 0.4)||rgba(255, 255, 255, 0.35)||rgba(255, 255, 255, 0.3)"
+								data-xy="x:r,c,c,c;xo:-130px,503px,379px,233px;y:m,t,t,t;yo:0,461px,350px,320px;"
+								data-text="s:25;l:32;fw:500;a:center;"
+								data-dim="w:30px;h:30px;"
+								data-actions='o:click;a:jumptoslide;slide:previous;'
+								data-rsp_bd="off"
+								data-onslides="s:1;"
+								data-padding="t:1;r:1;b:1;l:1;"
+								data-border="bos:solid;bow:1px,1px,1px,1px;bor:30px,30px,30px,30px;"
+								data-frame_0="y:30px;"
+								data-frame_1="e:power4.out;st:1000;sp:1500;"
+								data-frame_999="o:0;e:nothing;st:w;"
+								data-frame_hover="c:#5ac8fa;bor:30px,30px,30px,30px;bos:solid;bow:1px,1px,1px,1px;oX:50;oY:50;e:power1.inOut;"
+								style="z-index:6;font-family:'Roboto';cursor:pointer;outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;"
+							><i class="material-icons">arrow_forward_ios</i> 
+							</rs-layer><!--
+					--></rs-static-layers>
+				</rs-module>
+				<script>
+					
+				</script>
+<script>
+		if(typeof revslider_showDoubleJqueryError === "undefined") {function revslider_showDoubleJqueryError(sliderID) {console.log("You have some jquery.js library include that comes after the Slider Revolution files js inclusion.");console.log("To fix this, you can:");console.log("1. Set 'Module General Options' -> 'Advanced' -> 'jQuery & OutPut Filters' -> 'Put JS to Body' to on");console.log("2. Find the double jQuery.js inclusion and remove it");return "Double Included jQuery Library";}}
+</script>
+			</rs-module-wrap>
+			<!-- END REVOLUTION SLIDER -->
+
+				<script>
+					var	tpj = jQuery;
+					if(window.RS_MODULES === undefined) window.RS_MODULES = {};
+					if(RS_MODULES.modules === undefined) RS_MODULES.modules = {};
+					RS_MODULES.modules["services"] = {once: RS_MODULES.modules["services"]!==undefined ? RS_MODULES.modules["services"].once : undefined, init:function() {
+						window.revapi244 = window.revapi244===undefined || window.revapi244===null || window.revapi244.length===0  ? document.getElementById("services") : window.revapi244;
+						if(window.revapi244 === null || window.revapi244 === undefined || window.revapi244.length==0) { window.revapi244initTry = window.revapi244initTry ===undefined ? 0 : window.revapi244initTry+1; if (window.revapi244initTry<20) requestAnimationFrame(function() {RS_MODULES.modules["services"].init()}); return;}
+						window.revapi244 = jQuery(window.revapi244);
+						if(window.revapi244.revolution==undefined){ revslider_showDoubleJqueryError("services"); return;}
+						revapi244.revolutionInit({
+								revapi:"revapi244",
+								DPR:"dpr",
+								sliderLayout:"fullscreen",
+								duration:"60000ms",
+								visibilityLevels:"1240,1024,778,480",
+								gridwidth:"1240,1024,778,480",
+								gridheight:"800,768,700,700",
+								lazyType:"single",
+								perspective:600,
+								perspectiveType:"local",
+								editorheight:"800,768,700,700",
+								responsiveLevels:"1240,1024,778,480",
+								progressBar:{disableProgressBar:true},
+								navigation: {
+									keyboard_direction:"vertical",
+									mouseScrollNavigation:false,
+									wheelCallDelay:1000,
+									onHoverStop:false,
+									touch: {
+										touchenabled:true
+									}
+								},
+								parallax: {
+									levels:[15,16,17,18,19,20,-10,-20,-30,-40,-50,-60,15,10,100,55],
+									type:"scroll",
+									origo:"slidercenter",
+									speed:300
+								},
+								fanim: {
+									in:{"o":0},
+									out:{"a":false},
+									speed:1000
+								},
+								viewPort: {
+									global:false,
+									globalDist:"-200px",
+									enable:true,
+									visible_area:"50%"
+								},
+								fallbacks: {
+									allowHTML5AutoPlayOnAndroid:true
+								},
+						});
+						
+					}} // End of RevInitScript
+					if (window.RS_MODULES.checkMinimal!==undefined) { window.RS_MODULES.checkMinimal();};
+				</script>
+
+
+
+<style>@font-face{font-family:'Material Icons'; font-style:normal; font-weight:400; src:url(//fonts.gstatic.com/s/materialicons/v41/flUhRq6tzZclQEJ-Vdg-IuiaDsNcIhQ8tQ.woff2) format('woff2')}rs-module .material-icons{font-family:'Material Icons'; font-weight:normal; font-style:normal;font-size:inherit; display:inline-block; text-transform:none; letter-spacing:normal; word-wrap:normal; white-space:nowrap; direction:ltr; vertical-align:top; line-height:inherit; font-feature-settings:'liga'; -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility; -moz-osx-font-smoothing:grayscale}</style>
+<script type="text/javascript">window.RVS = window.RVS || {}; window.RVS.ENV = window.RVS.ENV || {}; window.RVS.ENV.TRANSITIONPACK_URL = "https://wordpress-966162-3585430.cloudwaysapps.com/wp-content/plugins/revslider-transitionpack-addon/";</script>
+		</body>
+				</html>
+		

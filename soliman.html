@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        @font-face {
+            font-family: pop;
+            src: url(poppins/Poppins-SemiBold.otf);
+        }
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        nav{
+            background-color: black;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: fixed;
+            
+        }
+
+        nav img{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width:80px;
+            height:55px;
+            padding-left: 8px;
+        }
+
+        nav a{
+            color: white;
+            text-decoration:none;
+            font-family: pop;
+            padding-left: 20px;
+            padding-right: 10px;
+
+            
+        }
+
+        nav a:hover {
+        text-decoration: underline;
+        text-decoration-thickness: 3px;
+        text-underline-offset: 10px; /* adjust the value to move the underline away from the text */
+        text-decoration-color: rgb(173, 173, 173);
+        }
+
+
+
+        @media screen and (max-width: 600px) {
+        nav {
+            flex-direction:row;
+            align-items: center;
+            margin-right: 5px;
+        }
+
+        nav a{
+            font-size: 10px;
+            padding-left: 10px;
+            padding-right: 5px;
+
+        }
+        nav img{
+            height: 50px;
+            width: 60px;
+        }
+    }
+    </style>
+</head>
+<body>
+    
+    <nav style="display: flex; justify-content: center;">
+        
+        <a href="">PORTOFOLIO</a>
+        <a href="" >SERVICES</a>
+        <img src="Asset 100.svg" class="img" >
+        <a href="">INTRODUCTION</a>
+        <a href="">CONTACTS</a>
+    </nav>
+
+
+            
+</body>
+</html>
